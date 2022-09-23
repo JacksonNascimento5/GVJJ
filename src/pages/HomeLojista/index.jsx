@@ -5,7 +5,7 @@ import Header from '../../../components/header';
 export default function HomeLojista() {
   return (
     <View>
-      <Header></Header>
+      <Header teste={1}></Header>
     </View>
   )
 }

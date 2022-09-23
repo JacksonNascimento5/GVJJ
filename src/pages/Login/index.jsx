@@ -2,6 +2,7 @@ import React from "react";
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from "react-native";
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
+import Header from "../../../components/header";
 
 export default function Login(){
     return(
@@ -31,6 +32,7 @@ export default function Login(){
                     <Text style={styles.botaoPrimeiroAcesso}>Cadastre-se</Text>
                 </TouchableOpacity>
             </View>
+            
         </View>
     );
 }
