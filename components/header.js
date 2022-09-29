@@ -20,15 +20,15 @@ export default function Header({atual}) {
         </View>
         <View style={styles.viewBotoes}>
             <TouchableOpacity style={[(atual == 3) ? styles.atual: styles.botao]}>
-                <Entypo name="home" size={30} color="#e1e1e1" /> 
+                <Ionicons name="person-outline" size={30} color="#e1e1e1" /> 
             </TouchableOpacity>
-            <Text style={styles.texto}>Home</Text>
+            <Text style={styles.texto}>Perfil</Text>
         </View>
         <View style={styles.viewBotoes}>
             <TouchableOpacity style={[(atual == 4) ? styles.atual: styles.botao]}>
-            <Ionicons name="person-outline" size={30} color="#e1e1e1" />
+                <Ionicons name="exit-outline" size={24} color="#e1e1e1" />
             </TouchableOpacity>
-            <Text style={styles.texto}>Perfil</Text>
+            <Text style={styles.texto}>Sair</Text>
         </View>
     </View>
   );

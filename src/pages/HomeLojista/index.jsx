@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Header from '../../../components/header';
 
@@ -9,33 +9,34 @@ export default function HomeLojista() {
                 <Text style={styles.nomeEmpresa}>Lojas ABC</Text>
                 <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
             </View>
+            
             {/* Container do botões */}
             <View style={styles.containerBotoes}>
                 {/*Botões de cima */}
                 <View style={styles.botoesCima}>
                     {/* Botão relatorio */}
-                    <View>
+                    <TouchableOpacity>
                         <Text>Relatórios</Text>
-                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
-                    </View>
+                        <Image source={require('../../../assets/relatorio-de-negocios.png')}  style={styles.imagem}/> 
+                    </TouchableOpacity>
                     {/*Botão contatos */}
-                    <View>
+                    <TouchableOpacity>
                         <Text>Contatos</Text>
-                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
-                    </View>
+                        <Image source={require('../../../assets/contatos.png')}  style={styles.imagem}/>
+                    </TouchableOpacity>
                 </View>
                 {/*Botões de baixo */}
                 <View style={styles.botoesCima}>
                     {/* Botão Produtos */}
-                    <View>
-                        <Text>Relatórios</Text>
+                    <TouchableOpacity>
+                        <Text>Produtos</Text>
                         <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
-                    </View>
+                    </TouchableOpacity>
                     {/*Botão Perfil */}
-                    <View>
-                        <Text>Contatos</Text>
+                    <TouchableOpacity>
+                        <Text>Perfil</Text>
                         <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
             <Header atual={1}></Header>
@@ -74,5 +75,6 @@ const styles = StyleSheet.create({
     botoesCima:{
         flexDirection:'row',
         justifyContent:'space-around'
-    }
+    },
+    
 });
