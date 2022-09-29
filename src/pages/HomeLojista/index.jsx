@@ -1,11 +1,78 @@
-import { View, Text } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import Header from '../../../components/header';
 
 export default function HomeLojista() {
-  return (
-    <View>
-      <Header atual={4}></Header>
-    </View>
-  )
+    return (
+        <View style={styles.container}>
+            <View style={styles.viewNome}>
+                <Text style={styles.nomeEmpresa}>Lojas ABC</Text>
+                <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
+            </View>
+            {/* Container do botões */}
+            <View style={styles.containerBotoes}>
+                {/*Botões de cima */}
+                <View style={styles.botoesCima}>
+                    {/* Botão relatorio */}
+                    <View>
+                        <Text>Relatórios</Text>
+                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
+                    </View>
+                    {/*Botão contatos */}
+                    <View>
+                        <Text>Contatos</Text>
+                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
+                    </View>
+                </View>
+                {/*Botões de baixo */}
+                <View style={styles.botoesCima}>
+                    {/* Botão Produtos */}
+                    <View>
+                        <Text>Relatórios</Text>
+                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
+                    </View>
+                    {/*Botão Perfil */}
+                    <View>
+                        <Text>Contatos</Text>
+                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
+                    </View>
+                </View>
+            </View>
+            <Header atual={1}></Header>
+        </View>
+    )
 }
+
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent:'space-between',
+        alignItems:'center'
+    },
+    viewNome:{
+        flexDirection:'row',
+        marginTop:50,
+        justifyContent:'space-around',
+        width:'90%',
+        alignItems:'center',
+        
+    },
+    imagem:{
+        width:100,
+        height:100
+    },
+    nomeEmpresa:{
+        fontSize:30,
+        fontWeight:'700',
+        letterSpacing:2,
+        color:'#363949'
+    },
+    containerBotoes:{
+        
+        width:'90%'
+    },
+    botoesCima:{
+        flexDirection:'row',
+        justifyContent:'space-around'
+    }
+});
