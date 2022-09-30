@@ -1,6 +1,7 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Header from '../../../components/header';
+import Button from '../../../components/Button';
 
 export default function HomeLojista() {
     return (
@@ -38,6 +39,9 @@ export default function HomeLojista() {
                         <Image source={require('../../../assets/perfil.png')}  style={styles.imagem}/>
                     </TouchableOpacity>
                 </View>
+            </View>
+            <View style={styles.botoesDeBaixo}>
+                <Button texto='Ver sua página' />
             </View>
             <Header atual={1}></Header>
         </View>
@@ -80,6 +84,10 @@ const styles = StyleSheet.create({
     textoBotoes:{
         fontSize:20,
         fontWeight:'600'
+    },
+    botoesDeBaixo:{
+        width:'100%',
+        paddingVertical:50
     }
     
 });

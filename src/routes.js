@@ -17,12 +17,12 @@ export default function Routes(){
             <appStack.Navigator headerMode="none" screenOptions={{
                 cardStyle:{backgroundColor:'#f0f0f5'}
             }}>
-                <appStack.Screen name="DefineComparacao" component={DefinineComparacao}/>
+                
                 <appStack.Screen name="HomeLojista" component={HomeLojista}/>
                 <appStack.Screen name="Definicao" component={Definicao}/>
                 <appStack.Screen name="Login" component={Login}/>
                 <appStack.Screen name="Cadastro" component={Cadastro}/>
-                
+                <appStack.Screen name="DefineComparacao" component={DefinineComparacao}/>
                 
                
             </appStack.Navigator>
