@@ -1,7 +1,7 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Header from '../../../components/header';
-import Button from '../../../components/Button';
+import ButtonTiny from '../../../components/ButtonTiny';
 
 export default function HomeLojista() {
     return (
@@ -27,7 +27,7 @@ export default function HomeLojista() {
                     </TouchableOpacity>
                 </View>
                 {/*Botões de baixo */}
-                <View style={styles.botoesCima}>
+                <View style={styles.botoesDeBaixo}>
                     {/* Botão Produtos */}
                     <TouchableOpacity>
                         <Text style={styles.textoBotoes}>Produtos</Text>
@@ -40,9 +40,14 @@ export default function HomeLojista() {
                     </TouchableOpacity>
                 </View>
             </View>
-            <View style={styles.botoesDeBaixo}>
-                <Button texto='Ver sua página' />
+            
+            <View>
+                <ButtonTiny texto='Ver sua página'/>
+                <ButtonTiny texto='Alterar cadastro'/>
+                <ButtonTiny texto='Excluir cadastro'/>
             </View>
+                
+            
             <Header atual={1}></Header>
         </View>
     )
@@ -74,7 +79,8 @@ const styles = StyleSheet.create({
         color:'#363949'
     },
     containerBotoes:{
-        
+        justifyContent:'space-between',
+        flexDirection:'column',
         width:'90%'
     },
     botoesCima:{
@@ -86,8 +92,10 @@ const styles = StyleSheet.create({
         fontWeight:'600'
     },
     botoesDeBaixo:{
-        width:'100%',
-        paddingVertical:50
+        marginTop:20,
+        flexDirection:'row',
+        justifyContent:'space-around',
+        alignItems:'center'
     }
     
 });
