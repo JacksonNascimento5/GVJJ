@@ -16,12 +16,12 @@ export default function HomeLojista() {
                 <View style={styles.botoesCima}>
                     {/* Botão relatorio */}
                     <TouchableOpacity>
-                        <Text>Relatórios</Text>
+                        <Text style={styles.textoBotoes}>Relatórios</Text>
                         <Image source={require('../../../assets/relatorio-de-negocios.png')}  style={styles.imagem}/> 
                     </TouchableOpacity>
                     {/*Botão contatos */}
                     <TouchableOpacity>
-                        <Text>Contatos</Text>
+                        <Text style={styles.textoBotoes}>Contatos</Text>
                         <Image source={require('../../../assets/contatos.png')}  style={styles.imagem}/>
                     </TouchableOpacity>
                 </View>
@@ -29,13 +29,13 @@ export default function HomeLojista() {
                 <View style={styles.botoesCima}>
                     {/* Botão Produtos */}
                     <TouchableOpacity>
-                        <Text>Produtos</Text>
-                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
+                        <Text style={styles.textoBotoes}>Produtos</Text>
+                        <Image source={require('../../../assets/caixa.png')}  style={styles.imagem}/>
                     </TouchableOpacity>
                     {/*Botão Perfil */}
                     <TouchableOpacity>
-                        <Text>Perfil</Text>
-                        <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
+                        <Text style={styles.textoBotoes}>Perfil</Text>
+                        <Image source={require('../../../assets/perfil.png')}  style={styles.imagem}/>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         justifyContent:'space-between',
-        alignItems:'center'
+        alignItems:'center',
+        backgroundColor:'#f5f5f5'
     },
     viewNome:{
         flexDirection:'row',
@@ -76,5 +77,9 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-around'
     },
+    textoBotoes:{
+        fontSize:20,
+        fontWeight:'600'
+    }
     
 });
