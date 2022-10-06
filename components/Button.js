@@ -11,16 +11,17 @@ export default function Button({texto}) {
 const styles = StyleSheet.create({
     button:{
         backgroundColor:'#353dfa',
-        width:'80%',
+        width:300,
         borderRadius:7,
         alignItems:'center',
         justifyContent:'center',
         marginTop:30,
-        height:'8%'
+        height:50
     },
     buttonText:{
         color:'#fff',
         fontSize:17,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        letterSpacing:1
     }
 })

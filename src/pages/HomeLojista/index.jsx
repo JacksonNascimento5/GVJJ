@@ -2,10 +2,12 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Header from '../../../components/header';
 import ButtonTiny from '../../../components/ButtonTiny';
+import Button from '../../../components/Button';
 
 export default function HomeLojista() {
     return (
         <View style={styles.container}>
+            
             <View style={styles.viewNome}>
                 <Text style={styles.nomeEmpresa}>Lojas ABC</Text>
                 <Image source={require('../../../assets/image-icon.png')}  style={styles.imagem}/>
@@ -16,12 +18,12 @@ export default function HomeLojista() {
                 {/*Botões de cima */}
                 <View style={styles.botoesCima}>
                     {/* Botão relatorio */}
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.botoes}>
                         <Text style={styles.textoBotoes}>Relatórios</Text>
                         <Image source={require('../../../assets/relatorio-de-negocios.png')}  style={styles.imagem}/> 
                     </TouchableOpacity>
                     {/*Botão contatos */}
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.botoes}>
                         <Text style={styles.textoBotoes}>Contatos</Text>
                         <Image source={require('../../../assets/contatos.png')}  style={styles.imagem}/>
                     </TouchableOpacity>
@@ -29,12 +31,12 @@ export default function HomeLojista() {
                 {/*Botões de baixo */}
                 <View style={styles.botoesDeBaixo}>
                     {/* Botão Produtos */}
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.botoes}>
                         <Text style={styles.textoBotoes}>Produtos</Text>
                         <Image source={require('../../../assets/caixa.png')}  style={styles.imagem}/>
                     </TouchableOpacity>
                     {/*Botão Perfil */}
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.botoes}>
                         <Text style={styles.textoBotoes}>Perfil</Text>
                         <Image source={require('../../../assets/perfil.png')}  style={styles.imagem}/>
                     </TouchableOpacity>
@@ -42,12 +44,8 @@ export default function HomeLojista() {
             </View>
             
             <View>
-                <ButtonTiny texto='Ver sua página'/>
-                <ButtonTiny texto='Alterar cadastro'/>
-                <ButtonTiny texto='Excluir cadastro'/>
+                <Button texto='Ver sua página'/>
             </View>
-                
-            
             <Header atual={1}></Header>
         </View>
     )
@@ -89,13 +87,18 @@ const styles = StyleSheet.create({
     },
     textoBotoes:{
         fontSize:20,
-        fontWeight:'600'
+        fontWeight:'600',
+        color:'#363949'
     },
     botoesDeBaixo:{
         marginTop:20,
         flexDirection:'row',
         justifyContent:'space-around',
         alignItems:'center'
+    },
+    botoes:{
+        alignItems:'center',
+        justifyContent:'center'
     }
     
 });

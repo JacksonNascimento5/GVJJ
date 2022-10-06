@@ -23,7 +23,7 @@ export default function Login(){
             </View>
 
             {/* COMPONENTE DO BOTÃO DE LOGIN */ }
-            <Button texto='Entrar'/>
+            <Button texto='ENTRAR'/>
 
             {/* VIEW PARA REDICIONAMENTO DE CADASTRO */ }
             <View style={styles.viewPrimeiroAcesso}>

@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native';
 import { Entypo, AntDesign, Ionicons } from '@expo/vector-icons';
 
 
 export default function Header({atual}) {
  return (
     <View style={styles.header}>
+        
         <View style={styles.viewBotoes}>
             <TouchableOpacity style={[(atual == 1) ? styles.atual: styles.botao]}>
                 <Entypo name="home" size={30} color='#e1e1e1' />
@@ -30,6 +31,7 @@ export default function Header({atual}) {
             </TouchableOpacity>
             <Text style={styles.texto}>Sair</Text>
         </View>
+        
     </View>
   );
 }
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#242424',
         flexDirection:'row',
         alignSelf:'flex-end',
-        paddingVertical:22,
+        paddingVertical:19,
         width:'100%'
     },
     viewBotoes:{
