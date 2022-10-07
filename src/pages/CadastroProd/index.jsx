@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet , ScrollView, PixelRatio, Dimensions, Platform } from "react-native";
+import Header from "../../../components/header";
 //#region Está area é para ajustar a font do titulo, caso seja iPhone/web/android
 const {
         width: SCREEN_WIDHT,
@@ -27,7 +28,7 @@ export default function CadastroProd({navigation}){
         /*O Code abaixo é referente a tela de cadastro de produto */
         
         <View style={styles.container}>
-            <TouchableOpacity onPress={()=>navigation.navigate("Login")}>Voltar</TouchableOpacity>
+           
             {/* Adicionando ScrollView */}
             <ScrollView style={styles.scrol} showsVerticalScrollIndicator={true}>
             <View style={styles.viewFormulario}>
@@ -75,6 +76,7 @@ export default function CadastroProd({navigation}){
                 <TouchableOpacity style={styles.botaoCliente}><Text style={styles.textoBotao}>Ver como cliente</Text></TouchableOpacity>
             </View>
             </ScrollView>
+            <Header></Header>
         </View>
     )
 }
