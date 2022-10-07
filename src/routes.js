@@ -8,6 +8,7 @@ import Definicao from "./pages/Definicao";
 import Cadastro from "./pages/Cadastro";
 import HomeLojista from "./pages/HomeLojista";
 import DefinineComparacao from "./pages/DefineComparacao";
+import CadastroProd from "./pages/CadastroProd";
 
 const appStack = createStackNavigator();
 
@@ -17,7 +18,7 @@ export default function Routes(){
             <appStack.Navigator headerMode="none" screenOptions={{
                 cardStyle:{backgroundColor:'#f0f0f5'}
             }}>
-                
+                <appStack.Screen name="CadastroProd" component={CadastroProd}/>
                 <appStack.Screen name="HomeLojista" component={HomeLojista}/>
                 <appStack.Screen name="Definicao" component={Definicao}/>
                 <appStack.Screen name="Login" component={Login}/>
