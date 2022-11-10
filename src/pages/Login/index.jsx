@@ -3,8 +3,10 @@ import {View, Text, StyleSheet, TextInput, TouchableOpacity} from "react-native"
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
 import Header from "../../../components/header";
+import { useNavigation } from '@react-navigation/native';
 
 export default function Login(){
+    const navigation = useNavigation();
     return(
         <View style={styles.container}>
 
@@ -23,12 +25,14 @@ export default function Login(){
             </View>
 
             {/* COMPONENTE DO BOTÃO DE LOGIN */ }
-            <Button texto='ENTRAR'/>
+            <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('HomeLojista')}>
+                <Text style={styles.buttonText}>ENTRAR</Text>
+            </TouchableOpacity>
 
             {/* VIEW PARA REDICIONAMENTO DE CADASTRO */ }
             <View style={styles.viewPrimeiroAcesso}>
                 <Text style={styles.textoPrimeiroAcesso}>Primeiro acesso?</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=> navigation.navigate('Cadastro')}>
                     <Text style={styles.botaoPrimeiroAcesso}>Cadastre-se</Text>
                 </TouchableOpacity>
             </View>
@@ -93,6 +97,21 @@ const styles = StyleSheet.create({
     botaoPrimeiroAcesso:{
         color:'#353dfa',
         fontSize:20
+    },
+    button:{
+        backgroundColor:'#353dfa',
+        width:300,
+        borderRadius:7,
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:30,
+        height:50
+    },
+    buttonText:{
+        color:'#fff',
+        fontSize:17,
+        fontWeight:'bold',
+        letterSpacing:1
     }
     /*FIM DA VIEW PARA REDIRECIONAR PARA O CADASTRO */
 });

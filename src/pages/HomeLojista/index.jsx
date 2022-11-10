@@ -1,10 +1,10 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Header from '../../../components/header';
-import ButtonTiny from '../../../components/ButtonTiny';
-import Button from '../../../components/Button';
+import { useNavigation } from '@react-navigation/native';
 
 export default function HomeLojista() {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
             
@@ -44,7 +44,9 @@ export default function HomeLojista() {
             </View>
             
             <View>
-                <Button texto='Ver sua página'/>
+            <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Loja')}>
+                <Text style={styles.buttonText}>Ver sua página</Text>
+            </TouchableOpacity>
             </View>
             <Header atual={1}></Header>
         </View>
@@ -99,6 +101,21 @@ const styles = StyleSheet.create({
     botoes:{
         alignItems:'center',
         justifyContent:'center'
+    },
+    button:{
+        backgroundColor:'#353dfa',
+        width:300,
+        borderRadius:7,
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:30,
+        height:50
+    },
+    buttonText:{
+        color:'#fff',
+        fontSize:17,
+        fontWeight:'bold',
+        letterSpacing:1
     }
     
 });

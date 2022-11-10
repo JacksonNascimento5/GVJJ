@@ -3,22 +3,26 @@ import { RectButton } from "react-native-gesture-handler";
 import {View, Text, StyleSheet} from "react-native";
 import { Entypo } from '@expo/vector-icons'; 
 import { FontAwesome } from '@expo/vector-icons'; 
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function Definicao(){
+    const navigation = useNavigation();
+
     return(
         <View style={styles.container}>
             <View style={styles.viewTexto}>
                 <Text style={styles.texto}>Nos conte se você é </Text>
             </View>
             <View style={styles.viewBotoes}>
-                <RectButton style={styles.botoes}>
+                <RectButton style={styles.botoes} onPress={()=> navigation.navigate('Login')}>
                     <Text style={styles.textoBotoes}>Lojista/Prestador</Text>
                     <View style={styles.viewIcones}>
                         <Entypo name="shop" size={35} color="#e9ecf2" />
                     </View>
                 </RectButton>
                 <Text style={styles.texto}>ou</Text>
-                <RectButton style={styles.botoes}>
+                <RectButton style={styles.botoes} onPress={()=> navigation.navigate('DefineComparacao')}>
                     <Text style={styles.textoBotoes}>Cliente</Text>
                     <View style={styles.viewIcones}>
                         <FontAwesome name="user" size={35} color="#e9ecf2" />
